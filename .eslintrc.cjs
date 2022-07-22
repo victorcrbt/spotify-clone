@@ -40,6 +40,13 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: [['external', 'builtin'], 'internal', ['parent', 'sibling']],
+        'newlines-between': 'always',
+      },
+    ],
   },
   settings: {
     'import/parsers': {
