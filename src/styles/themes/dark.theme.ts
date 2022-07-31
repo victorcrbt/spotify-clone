@@ -50,7 +50,7 @@ export const darkTheme: DefaultTheme = {
         contrast: '#fff',
       },
       light: {
-        main: '#221b1b',
+        main: '#333',
         contrast: '#fff',
       },
       dark: {
