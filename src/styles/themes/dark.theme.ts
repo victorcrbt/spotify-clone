@@ -47,29 +47,29 @@ export const darkTheme: DefaultTheme = {
     background: {
       default: {
         main: '#191414',
-        contrast: '#222222',
+        contrast: '#fff',
       },
       light: {
-        main: '#fbfaef',
-        contrast: '#222222',
+        main: '#333',
+        contrast: '#fff',
       },
       dark: {
-        main: '#e9e7af',
-        contrast: '#222222',
+        main: '#000',
+        contrast: '#fff',
       },
     },
     text: {
       default: {
         main: '#fff',
-        contrast: '#F5F4DC',
+        contrast: '#191414',
       },
       light: {
-        main: '#444444',
-        contrast: '#ffffff',
+        main: '#fff',
+        contrast: '#221b1b',
       },
       dark: {
-        main: '#151515',
-        contrast: '#ffffff',
+        main: '#fff',
+        contrast: '#000',
       },
     },
     success: {
