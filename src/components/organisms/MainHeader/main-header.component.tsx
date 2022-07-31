@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
+import { Typography } from '@components/atoms';
+
 import { Wrapper } from './main-header.styles';
 
 export const MainHeader: FC = () => (
@@ -16,7 +18,7 @@ export const MainHeader: FC = () => (
 
     <div className="user-menu">
       <img src="https://i.pravatar.cc/300" alt="" />
-      <p>Victor Batalha</p>
+      <Typography>Victor Batalha</Typography>
     </div>
   </Wrapper>
 );

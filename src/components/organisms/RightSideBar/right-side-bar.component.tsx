@@ -1,12 +1,16 @@
 import { FC } from 'react';
 import { MdPersonAddAlt, MdClose } from 'react-icons/md';
 
+import { Typography } from '@components/atoms';
+
 import { Wrapper } from './right-side-bar.styles';
 
 export const RightSideBar: FC = () => (
   <Wrapper>
     <header>
-      <p>Friend Activity</p>
+      <Typography weight="bold" opacity={0.6}>
+        Friend Activity
+      </Typography>
       <div className="header-icons-wrapper">
         <button type="button">
           <MdPersonAddAlt size={20} />
@@ -19,50 +23,28 @@ export const RightSideBar: FC = () => (
 
     <div className="friends-activity-wrapper">
       <ul>
-        <li>
-          <img className="user-avatar" src="https://i.pravatar.cc/300" alt="" />
-          <div>
-            <h3>John Doe</h3>
-            <p>Music Name - Artist</p>
-            <div className="playlist-info">
-              <span>icon</span>
-              <p>Playlist</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img className="user-avatar" src="https://i.pravatar.cc/300" alt="" />
-          <div>
-            <h3>John Doe</h3>
-            <p>Music Name - Artist</p>
-            <div className="playlist-info">
-              <span>icon</span>
-              <p>Playlist</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img className="user-avatar" src="https://i.pravatar.cc/300" alt="" />
-          <div>
-            <h3>John Doe</h3>
-            <p>Music Name - Artist</p>
-            <div className="playlist-info">
-              <span>icon</span>
-              <p>Playlist</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img className="user-avatar" src="https://i.pravatar.cc/300" alt="" />
-          <div>
-            <h3>John Doe</h3>
-            <p>Music Name - Artist</p>
-            <div className="playlist-info">
-              <span>icon</span>
-              <p>Playlist</p>
-            </div>
-          </div>
-        </li>
+        {Array(4)
+          .fill(0)
+          .map((_, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <li key={index.toString()}>
+              <img
+                className="user-avatar"
+                src="https://i.pravatar.cc/300"
+                alt=""
+              />
+              <div>
+                <Typography opacity={0.6} weight="bold">
+                  John Doe
+                </Typography>
+                <Typography size="sm">Music Name - Artist</Typography>
+                <div className="playlist-info">
+                  <span>icon</span>
+                  <Typography size="sm">Playlist</Typography>
+                </div>
+              </div>
+            </li>
+          ))}
       </ul>
     </div>
   </Wrapper>

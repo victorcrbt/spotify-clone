@@ -14,12 +14,6 @@ export const Wrapper = styled.aside`
     align-items: center;
   }
 
-  header p {
-    font-weight: bold;
-    font-size: 14px;
-    opacity: 0.6;
-  }
-
   .header-icons-wrapper button {
     width: 28px;
     height: 28px;
