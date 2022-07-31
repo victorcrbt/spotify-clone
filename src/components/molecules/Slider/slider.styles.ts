@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
-import BaseSlider from 'react-slider';
 import { lighten } from 'polished';
+
+import { RangeInput } from '@components/atoms';
 
 export const Wrapper = styled.div`
   cursor: pointer;
@@ -56,20 +57,4 @@ export const Wrapper = styled.div`
   }
 `;
 
-type SliderProps = {
-  isFocused: boolean;
-};
-
-export const Input = styled(BaseSlider)<SliderProps>`
-  ${props =>
-    props.isFocused &&
-    css`
-      .slider-thumb {
-        opacity: 1;
-      }
-
-      .slider-track.slider-track-0 {
-        background: ${props.theme.color.primary.default.main};
-      }
-    `}
-`;
+export const Input = styled(RangeInput)``;

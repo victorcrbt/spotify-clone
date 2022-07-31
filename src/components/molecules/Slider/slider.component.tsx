@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, forwardRef } from 'react';
+import { useState, forwardRef } from 'react';
 
 import { Wrapper, Input } from './slider.styles';
 

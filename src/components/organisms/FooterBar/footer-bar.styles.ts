@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 import { SIZES } from '@constants';
-
-import { Slider as BaseSlider } from '../Slider';
+import { Slider as BaseSlider } from '@components/molecules';
 
 export const Wrapper = styled.div`
   position: fixed;
