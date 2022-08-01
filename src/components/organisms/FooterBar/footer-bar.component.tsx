@@ -12,11 +12,12 @@ import {
 } from 'react-icons/md';
 import { intervalToDuration } from 'date-fns';
 
+import { Typography } from '@components/atoms';
+
 import {
   Wrapper,
   ProgressBar,
   VolumeControl,
-  Time,
   ProgressWrapper,
 } from './footer-bar.styles';
 
@@ -118,8 +119,12 @@ export function FooterBar() {
       <div className="current-playing">
         <img src="https://i.pravatar.cc/300" alt="" className="album-cover" />
         <div className="music-info-wrapper">
-          <p className="music-name">{tracks[currentTrackIndex].title}</p>
-          <p className="artist-name">{tracks[currentTrackIndex].artist}</p>
+          <Typography size="md" weight="bold" bottomSpacing="xs">
+            {tracks[currentTrackIndex].title}
+          </Typography>
+          <Typography size="sm" opacity={0.6}>
+            {tracks[currentTrackIndex].artist}
+          </Typography>
         </div>
         <MdOutlineFavorite size={24} />
       </div>
@@ -159,15 +164,14 @@ export function FooterBar() {
           </button>
         </div>
         <ProgressWrapper>
-          <Time>{getFormattedDuration(currentTime)}</Time>
+          <Typography size="sm">{getFormattedDuration(currentTime)}</Typography>
           <ProgressBar
             max={tracks[currentTrackIndex].timeInSeconds}
             value={currentTime}
           />
-          <Time>
-            {' '}
+          <Typography size="sm">
             {getFormattedDuration(tracks[currentTrackIndex].timeInSeconds)}
-          </Time>
+          </Typography>
         </ProgressWrapper>
       </div>
 

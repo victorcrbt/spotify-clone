@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 import { SIZES } from '@constants';
-
-import { Slider as BaseSlider } from '../Slider';
+import { Slider as BaseSlider } from '@components/molecules';
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -49,18 +48,6 @@ export const Wrapper = styled.div`
     margin-right: ${props => props.theme.spacing.md};
   }
 
-  .music-info-wrapper .music-name {
-    margin-bottom: ${props => props.theme.spacing.xs};
-
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  .music-info-wrapper .artist-name {
-    font-size: 12px;
-    opacity: 0.6;
-  }
-
   .track-controls {
     display: flex;
     flex: 1;
@@ -92,10 +79,6 @@ export const ProgressWrapper = styled.div`
 export const ProgressBar = styled(BaseSlider)`
   width: 400px;
   margin: 0 ${props => props.theme.spacing.md};
-`;
-
-export const Time = styled.p`
-  font-size: 12px;
 `;
 
 export const VolumeControl = styled(BaseSlider)`
