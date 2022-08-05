@@ -1,29 +1,32 @@
 /* eslint-disable no-await-in-loop */
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
-import { mapModulesToPages, mapPagesToRoutes } from '@utils/helpers';
+export * from './Main';
+export * from './Search';
 
-const modules = import.meta.glob('./*/index.ts');
+// import { mapModulesToPages, mapPagesToRoutes } from '@utils/helpers';
 
-const mappedModules: Array<{
-  name: string;
-  module: {
-    [key: string]: Core.AppPage;
-  };
-}> = [];
+// const modules = import.meta.glob('./*/index.ts');
 
-for (const path in modules) {
-  const splittedPath = path.split('/');
-  const name = splittedPath[1];
+// const mappedModules: Array<{
+//   name: string;
+//   module: {
+//     [key: string]: Core.AppPage;
+//   };
+// }> = [];
 
-  mappedModules.push({
-    module: await import(path),
-    name,
-  });
-}
+// for (const path in modules) {
+//   const splittedPath = path.split('/');
+//   const name = splittedPath[1];
 
-const pages = mapModulesToPages<Core.AppPage>({
-  modules: mappedModules,
-});
+//   mappedModules.push({
+//     module: await import(path),
+//     name,
+//   });
+// }
 
-export const routes = mapPagesToRoutes({ pages });
+// const pages = mapModulesToPages<Core.AppPage>({
+//   modules: mappedModules,
+// });
+
+// export const routes = mapPagesToRoutes({ pages });
