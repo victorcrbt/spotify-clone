@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import { Outlet } from 'react-router-dom';
 
 import {
   LeftSideBar,
@@ -9,16 +10,12 @@ import {
 
 import { Wrapper, CenterWrapper } from './default.styles';
 
-type DefaultTemplateProps = {
-  children?: ReactNode;
-};
-
-export const DefaultTemplate: FC<DefaultTemplateProps> = ({ children }) => (
+export const DefaultTemplate: FC = () => (
   <Wrapper>
     <LeftSideBar />
     <CenterWrapper>
       <MainHeader />
-      {children}
+      <Outlet />
     </CenterWrapper>
     <RightSideBar />
     <FooterBar />

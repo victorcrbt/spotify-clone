@@ -1,7 +1,5 @@
 import { MdPlayCircle } from 'react-icons/md';
 
-import { DefaultTemplate } from '@components/templates';
-
 import { Section } from './components';
 import {
   Wrapper,
@@ -138,34 +136,33 @@ const charts: Chart[] = [
   },
 ];
 
-export function Main() {
-  return (
-    <DefaultTemplate>
-      <Wrapper>
-        <AdBanner src="https://i.pravatar.cc/300" alt="" />
+export const Main: Core.AppPage = () => (
+  <Wrapper>
+    <AdBanner src="https://i.pravatar.cc/300" alt="" />
 
-        <RecentPlayedWrapper>
-          <SectionHeading>Good afternoon</SectionHeading>
-          <div className="playlist-wrapper">
-            <Playlists>
-              {recentPlayed.map(playlist => (
-                <li className="playlist-card">
-                  <img src={playlist.image} alt="" className="playlist-image" />
-                  <h4 className="playlist-name">{playlist.name}</h4>
-                  {playlist.isPlaying && (
-                    <button className="play-pause-button" type="button">
-                      <MdPlayCircle size={48} />
-                    </button>
-                  )}
-                </li>
-              ))}
-            </Playlists>
-          </div>
-        </RecentPlayedWrapper>
+    <RecentPlayedWrapper>
+      <SectionHeading>Good afternoon</SectionHeading>
+      <div className="playlist-wrapper">
+        <Playlists>
+          {recentPlayed.map(playlist => (
+            <li className="playlist-card">
+              <img src={playlist.image} alt="" className="playlist-image" />
+              <h4 className="playlist-name">{playlist.name}</h4>
+              {playlist.isPlaying && (
+                <button className="play-pause-button" type="button">
+                  <MdPlayCircle size={48} />
+                </button>
+              )}
+            </li>
+          ))}
+        </Playlists>
+      </div>
+    </RecentPlayedWrapper>
 
-        <Section title="Your top mixes" data={userMixes} />
-        <Section title="Charts" data={charts} maxCardsToShow={5} />
-      </Wrapper>
-    </DefaultTemplate>
-  );
-}
+    <Section title="Your top mixes" data={userMixes} />
+    <Section title="Charts" data={charts} maxCardsToShow={5} />
+  </Wrapper>
+);
+
+Main.path = '/';
+Main.isProtected = true;

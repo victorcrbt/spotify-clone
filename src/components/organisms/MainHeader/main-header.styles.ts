@@ -21,6 +21,10 @@ export const Wrapper = styled.header`
     align-items: center;
     justify-content: center;
 
+    &:disabled {
+      opacity: 0.3;
+    }
+
     &:first-child {
       margin-right: ${props => props.theme.spacing.sm};
     }
