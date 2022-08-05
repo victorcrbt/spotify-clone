@@ -1,12 +1,12 @@
 import { ThemeProvider } from 'styled-components';
 
-import { Main } from '@pages';
+import { Router } from '@src/navigation/router';
 import { GlobalStyles, darkTheme } from '@styles';
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Main />
+      <Router />
       <GlobalStyles />
     </ThemeProvider>
   );
