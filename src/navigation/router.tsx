@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-// import { routes } from '@pages';
-import { Main, Search } from '@pages';
+import { routes } from '@pages';
 import { DefaultTemplate } from '@components';
 
 type RouteType = {
@@ -10,29 +9,27 @@ type RouteType = {
   index?: boolean;
 };
 
-// const unprotectedRoutes: RouteType[] = routes.filter(
-//   route => !route.isProtected
-// );
+const unprotectedRoutes: RouteType[] = routes.filter(
+  route => !route.isProtected
+);
 
-// const protectedRoutes: RouteType[] = routes.filter(route => route.isProtected);
+const protectedRoutes: RouteType[] = routes.filter(route => route.isProtected);
 
 export const Router = () => (
   <BrowserRouter>
     <Routes>
       <Route element={<DefaultTemplate />}>
-        <Route path="/" element={<Main />} />
-        <Route path="/search" element={<Search />} />
-        {/* {protectedRoutes.map(route => (
+        {protectedRoutes.map(route => (
           <Route
             key={route.path}
             index={route.index}
             path={route.path}
             element={route.element}
           />
-        ))} */}
+        ))}
       </Route>
 
-      {/* <Route>
+      <Route>
         {unprotectedRoutes.map(route => (
           <Route
             key={route.path}
@@ -41,7 +38,7 @@ export const Router = () => (
             element={route.element}
           />
         ))}
-      </Route> */}
+      </Route>
     </Routes>
   </BrowserRouter>
 );
