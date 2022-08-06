@@ -61,7 +61,7 @@ function getFormattedDuration(timeInSeconds: number) {
   }${parsedMinutes}:${parsedSeconds}`;
 }
 
-let interval: number | null = null;
+let interval: NodeJS.Timer | null = null;
 
 export function FooterBar() {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
