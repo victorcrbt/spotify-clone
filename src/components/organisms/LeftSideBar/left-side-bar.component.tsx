@@ -8,6 +8,8 @@ import {
 } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 
+import { ROUTES } from '@constants';
+
 import { Wrapper } from './left-side-bar.styles';
 
 export const LeftSideBar: FC = () => {
@@ -20,13 +22,13 @@ export const LeftSideBar: FC = () => {
       <nav>
         <ul>
           <li>
-            <button type="button" onClick={handleNavigate('/')}>
+            <button type="button" onClick={handleNavigate(ROUTES.home)}>
               <MdHomeFilled size={20} />
               Home
             </button>
           </li>
           <li>
-            <button type="button" onClick={handleNavigate('/search')}>
+            <button type="button" onClick={handleNavigate(ROUTES.search)}>
               <MdSearch size={20} />
               Search
             </button>

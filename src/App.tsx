@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 
-import { Router } from '@src/navigation/router';
+import { Router } from '@src/navigation/router.component';
 import { GlobalStyles, darkTheme } from '@styles';
 
 function App() {
