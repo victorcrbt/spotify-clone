@@ -5,7 +5,7 @@ import { DefaultTemplate } from '@components';
 import { protectedRoutes, unprotectedRoutes } from './routes';
 
 export const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/spotify-clone">
     <Routes>
       <Route element={<DefaultTemplate />}>
         {protectedRoutes.map(route => (
