@@ -30,6 +30,7 @@ export const Wrapper = styled.aside`
     border: 0;
     opacity: 0.8;
     transition: opacity 0.4s;
+    text-transform: capitalize;
 
     display: flex;
     align-items: center;

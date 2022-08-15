@@ -7,12 +7,16 @@ import {
   MdFavorite,
 } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@constants';
+import { Translator } from '@components/atoms';
 
 import { Wrapper } from './left-side-bar.styles';
 
 export const LeftSideBar: FC = () => {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
 
   const handleNavigate = (path: string) => () => navigate(path);
@@ -24,19 +28,19 @@ export const LeftSideBar: FC = () => {
           <li>
             <button type="button" onClick={handleNavigate(ROUTES.home)}>
               <MdHomeFilled size={20} />
-              Home
+              <Translator path="components:leftSideBar.homeButton" />
             </button>
           </li>
           <li>
             <button type="button" onClick={handleNavigate(ROUTES.search)}>
               <MdSearch size={20} />
-              Search
+              <Translator path="components:leftSideBar.searchButton" />
             </button>
           </li>
           <li>
             <button type="button">
               <MdLibraryMusic size={20} />
-              Your Library
+              <Translator path="components:leftSideBar.libraryButton" />
             </button>
           </li>
         </ul>
@@ -45,11 +49,11 @@ export const LeftSideBar: FC = () => {
       <div className="controls">
         <button type="button">
           <MdAddBox size={20} />
-          Create Playlist
+          <Translator path="components:leftSideBar.createPlaylistButton" />
         </button>
         <button type="button">
           <MdFavorite size={20} />
-          Liked Songs
+          <Translator path="components:leftSideBar.likedSongsButton" />
         </button>
       </div>
 

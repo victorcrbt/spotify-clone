@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import { MdPersonAddAlt, MdClose } from 'react-icons/md';
 
-import { Typography } from '@components/atoms';
+import { Translator, Typography } from '@components/atoms';
 
 import { Wrapper } from './right-side-bar.styles';
 
 export const RightSideBar: FC = () => (
   <Wrapper>
     <header>
-      <Typography weight="bold" opacity={0.6}>
-        Friend Activity
+      <Typography weight="bold" opacity={0.6} transform="capitalize">
+        <Translator path="components:rightSideBar.headerTitle" />
       </Typography>
       <div className="header-icons-wrapper">
         <button type="button">
