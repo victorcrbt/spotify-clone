@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client"],
+    "types": ["vite/client", "node"],
     "baseUrl": ".",
     "paths": {
       "@components": ["./src/components/index.ts"],
@@ -25,6 +25,7 @@
       "@components/templates": ["./src/components/templates/index.ts"],
       "@config": ["./src/config/index.ts"],
       "@constants": ["./src/constants/index.ts"],
+      "@core": ["./src/core/index.ts"],
       "@hooks": ["./src/hooks/index.ts"],
       "@pages": ["./src/pages/index.ts"],
       "@services": ["./src/services/index.ts"],

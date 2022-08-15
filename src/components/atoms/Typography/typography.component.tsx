@@ -13,6 +13,7 @@ type TypographyProps = {
   weight?: 'normal' | 'bold';
   colorVariation?: 'light' | 'default' | 'dark';
   opacity?: number;
+  transform?: 'uppercase' | 'lowercase' | 'capitalize';
 };
 
 export const Typography = styled.p.attrs<TypographyProps>(props => ({
@@ -42,4 +43,5 @@ export const Typography = styled.p.attrs<TypographyProps>(props => ({
     props.theme.color.text[props.colorVariation || 'default'].main};
   font-size: ${props => props.theme.fontSize[props.size || 'md']};
   font-weight: ${props => props.weight || 'normal'};
+  text-transform: ${props => props.transform || 'initial'};
 `;

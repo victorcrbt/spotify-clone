@@ -3,23 +3,32 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://victorcrbt.github.io/spotify-clone",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "date-fns": "^2.29.1",
+    "gh-pages": "^4.0.0",
+    "i18next": "^21.8.16",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "lodash": "^4.17.21",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.3",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-slider": "^2.0.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@types/node": "^18.0.6",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^18.6.4",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/react-slider": "^1.3.1",

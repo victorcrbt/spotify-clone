@@ -1,5 +1,7 @@
 import { MdPlayCircle } from 'react-icons/md';
 
+import { ROUTES } from '@constants';
+
 import { Section } from './components';
 import {
   Wrapper,
@@ -164,5 +166,5 @@ export const Main: Core.AppPage = () => (
   </Wrapper>
 );
 
-Main.path = '/';
+Main.path = ROUTES.home;
 Main.isProtected = true;
